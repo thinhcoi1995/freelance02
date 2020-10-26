@@ -1,0 +1,46 @@
+footer {
+  .bFooter {
+    position: relative;
+    &__top {
+      padding: vw(40) 0 vw(27);
+      position: relative;
+      background: #EDEDED;
+      .row {
+        display: flex;
+        justify-content: flex-start;
+      }
+      &__logoFt {
+        line-height: 0;
+        width: vw(390);
+        a {
+          display: inline-block;
+          line-height: 0;
+          img {
+            max-width: vw(250);
+            height: auto;
+          }
+        }
+      }
+      &__menu {
+       display: none;
+      }
+    }
+    &__poster{
+      position: absolute;
+      right: vw(-33);
+      bottom:0;
+      img{
+        max-width: vw(330);
+      }
+    }
+    &__bottom {
+      background-color: $c_red;
+      padding: vw(29) 0;
+      text-align: center;
+      &__copyRight{
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  }
+}

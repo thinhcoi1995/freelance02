@@ -1,0 +1,77 @@
+footer {
+  padding-top: 300px;
+  .bFooter {
+    position: relative;
+    &__top {
+      padding: 40px 0 27px;
+      position: relative;
+      background: #EDEDED;
+      .row {
+        display: flex;
+        justify-content: flex-start;
+      }
+      &__logoFt {
+        line-height: 0;
+        width: 490px;
+        a {
+          display: inline-block;
+          line-height: 0;
+          img {
+            max-width: 350px;
+            height: auto;
+          }
+        }
+      }
+      &__menu {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 400px;
+        li {
+          width: 166px;
+          a{
+            display: block;
+            white-space: nowrap;
+            font-size: rem(16);
+            padding: 12px 0 12px 20px;
+            background: url(../img/icon_next_title.png) left 3px center no-repeat;
+            img{
+              width: 41px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    &__poster{
+      position: absolute;
+      right: -53px;
+      bottom:0;
+    }
+    &__bottom {
+      background-color: $c_red;
+      padding: 29px 0;
+      text-align: center;
+      &__copyRight{
+        font-size: rem(14);
+        line-height: 1;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+#go-top {
+	background: url('../img/go-top.png') center top no-repeat;
+	position: absolute;
+	z-index: 91;
+	height: 40px;
+	width: 40px;
+	right: 74px;
+	top: -40px;
+	cursor: pointer;
+}
+#go-top:hover {
+	opacity: 0.7;
+}
