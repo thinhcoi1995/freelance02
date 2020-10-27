@@ -23,6 +23,40 @@ window.cancelAnimFrame = (function(_id) {
     function(_id) { window.clearTimeout(id); };
 })();
 
+/* trigger */
+jQuery(function() {
+  jQuery('.triggerBasic, .trigger1, .trigger2, .triggerTB');
+    jQuery(window).scroll(function(){
+      var windowHeight = jQuery(window).height(),
+      topWindow = jQuery(window).scrollTop();
+      jQuery('.triggerBasic, .trigger1, .trigger2, .triggerTB').each(function(){
+      var targetPosition = jQuery(this).offset().top;
+//繧ｨ繝ｼ繧ｸ繧ｧ繝ｳ繝亥愛螳�
+    var ua = navigator.userAgent;
+    if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+        // 繧ｹ繝槭�繝医ヵ繧ｩ繝ｳ逕ｨ繧ｳ繝ｼ繝�
+if(topWindow > targetPosition - windowHeight + 50){
+        jQuery(this).addClass("active");
+        jQuery(this).removeClass("standby");
+      }
+    } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+        // 繧ｿ繝悶Ξ繝�ヨ逕ｨ繧ｳ繝ｼ繝�
+if(topWindow > targetPosition - windowHeight + 50){
+        jQuery(this).addClass("active");
+        jQuery(this).removeClass("standby");
+      }
+    } else {
+        // PC逕ｨ繧ｳ繝ｼ繝�
+if(topWindow > targetPosition - windowHeight + 300){
+        jQuery(this).addClass("active");
+        jQuery(this).removeClass("standby");
+      }
+    }
+//繧ｨ繝ｼ繧ｸ繧ｧ繝ｳ繝亥愛螳� end
+    });
+  });
+});
+
 function closest(el, selector) {
   // type el -> Object
   // type select -> String
