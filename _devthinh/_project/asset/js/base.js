@@ -141,7 +141,7 @@ function detectIE() {
 var Base = function() {
   ! function Base() {
     //new Menu();
-    //new Sticky();
+    new Sticky();
     // new PageTop();
     new ObjFit();
     // new Faq();
@@ -163,7 +163,7 @@ var Sticky = function () {
     var s = this;
     this._target = document.getElementById('header');
     this._basic_height = this._target.clientHeight;
-    this._mobile = document.getElementById('bHeader__bottom');
+    this._mobile = document.getElementById('g_nav');
     this._btnFixed = document.querySelector('.btnFixed');
     this._for_sp = function(top) {
       s._target.style.left = 0;
@@ -178,7 +178,7 @@ var Sticky = function () {
     }
     this._for_pc = function (top, _left) {
       s._mobile.style.top = 0;
-      var offset = s._target.querySelector('.bHeader__top').clientHeight;
+      var offset = s._target.querySelector('.hedear_in').clientHeight;
       document.body.style.paddingTop = s._mobile.clientHeight + 'px';
       if (top > offset) {
         s._target.classList.add('fixed');

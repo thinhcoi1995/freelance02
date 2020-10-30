@@ -67,7 +67,10 @@ align-items: stretch; /* 邵ｦ譁ｹ蜷�*/
 -webkit-justify-content: space-between; /*讓ｪ譁ｹ蜷托ｼ�Safari逕ｨ��*/
 justify-content: space-between; /*讓ｪ譁ｹ蜷�*/
 }
-
+#header.fixed{
+	top: 20px;
+	transition: all 0.3s ease-in-out;
+}
 .header_in {
   display: table;
   table-layout: fixed;
