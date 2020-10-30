@@ -34,12 +34,11 @@
     }
   }
   .titleWrap_bottom{
-    background-color: white;
     position: relative;
     text-align: center;
-    margin: 0 auto;
-    width: 73%;
     .title{
+      background-color: white;
+      margin: 0 125px;
       color: #231815;
       font-size: rem(29);
       font-weight: bold;
@@ -148,7 +147,7 @@
             margin: 0 -15px;
             li{
               width: 50%;
-              padding: 30px;
+              padding: 30px 20px;
               &::before{
                 content: "";
                 width: 1px;
@@ -167,20 +166,51 @@
                   display: block;
                   pointer-events: none;
                   .trigBase2{
-                    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.5);
+                    overflow: hidden;
+                    width: 100%;
                     .trigInner2{
-                      transform: translateX(-101%);
+                      transform: translateX(-103%);
+                      position: relative;
+                      overflow: hidden;
+                      box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.5);
+                      margin: 10px;
                       .imgWrap{
                         width: 100%;
                         background-color: #111;
                         overflow: hidden;
-                        height: 22vw;
+                        height: 451px;
                         min-height: 250px;
                         .bg{
                           -webkit-transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
                           -moz-transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
                           -o-transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
                           transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
+                        }
+                      }
+                      .textWrap{
+                        position: absolute;
+                        left: 0;
+                        width: 40px;
+                        overflow: hidden;
+                        background: #007900;
+                        color: white;
+                        font-weight: bold;
+                        bottom: 0;
+                        top: 0;
+                        p{
+                          -webkit-transform: rotate(-90deg);
+                          -moz-transform: rotate(-90deg);
+                          -o-transform: rotate(-90deg);
+                          -ms-transform: rotate(-90deg);
+                          transform: rotate(-90deg);
+                          white-space: nowrap;
+                          position: absolute;
+                          width: 250px;
+                          left: -106px;
+                          top: 80px;
+                          letter-spacing: 5px;
+                          font-size: rem(21);
+                          text-align: center;
                         }
                       }
                       &:before {
@@ -198,10 +228,8 @@
                   }
                   .trigBase2,
                   .trigInner2{
-                      width: 100%;
                       height: 100%;
                       position: relative;
-                      overflow: hidden;
                       -webkit-transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
                       -moz-transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
                       -o-transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
@@ -209,6 +237,7 @@
                   }
                   .titleWrap{
                     padding-top: 30px;
+                    margin: 0 10px;
                     text-align: right;
                     h2{
                       font-size: rem(21);
@@ -402,45 +431,6 @@
 
 .postWrap.thumbnail.col2>li.active:nth-child(odd)>article>a>.titleWrap{transition-delay: .5s !important;}
 
-
-/* post */
-.postWrap.thumbnail>li>article>a .imgWrap{
-  background-color: #EEE;
-}
-.postWrap.thumbnail.col2>li>article>a .imgWrap:after {
-  display: block;
-  width: 30px;
-  height: 100%;
-  -ms-writing-mode: tb-rl;
-  -webkit-writing-mode: vertical-rl;
-  writing-mode: vertical-rl;
-  line-height: 30px;
-  color: #FFF;
-  font-weight: 900;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0px;
-  margin: auto;
-  padding-top: 30px;
-  font-size: 12px;
-  background-size: 50%;
-  background-position: 50% 8px;
-  background-repeat: no-repeat;
-  transition: unset;
-}
-.postWrap.thumbnail.col2>li.postCat-interview>article>a .imgWrap:after {
-  content: "INTERVIEW";
-  background-color: #ff7bac;
-}
-.postWrap.thumbnail.col2>li.postCat-oneday>article>a .imgWrap:after {
-  content: "ONE DAY OF STAFF";
-  background-color: #fed360;
-}
-.postWrap.thumbnail.col2>li.postCat-blog>article>a .imgWrap:after {
-  content: "BLOG";
-  background-color: #00af46;
-}
 
 
 /* color interview + oneday */
