@@ -8,21 +8,6 @@ window.requestAnimFrame = (function(callback) {
       return window.setTimeout(callback, 1000 / 60);
     };
 })();
-/*
----------------------------------------
-Loading
----------------------------------------
-*/
-window.addEventListener('DOMContentLoaded', function() {
-  jQuery(".contentWrap,body>header,body>footer,.breadcrumbWrap,#footerEntryBtn").css("opacity", "1");
-    jQuery('#loadLayer').delay(3000).queue(function(next) {
-    jQuery(this).addClass("loadComplete");
-    });
-    jQuery('#loadLayer').delay(600).queue(function(next) {
-    jQuery(this).css('display','none');
-    next();
-    });
-});
 window.cancelAnimFrame = (function(_id) {
   return window.cancelAnimationFrame ||
     window.cancelRequestAnimationFrame ||
@@ -383,19 +368,19 @@ var ObjFit = (function(){
   }());
   new PicturePolyfill();
 }());
-//Go top footer
-$(document).ready(function() {
-	$(window).scroll(function() {
-    $('#go-top').stop().animate({
-      right: '74px'
-    }, 500);
-	});
-	$('#go-top').click(function() {
-		$('html, body').stop().animate({
-			scrollTop: 0
-		}, 500, function() {
-			$('#go-top').stop().animate({
-			}, 500);
-		});
-	});
+
+/*
+---------------------------------------
+Loading
+---------------------------------------
+*/
+window.addEventListener('DOMContentLoaded', function() {
+  jQuery(".contentWrap,body>header,body>footer,.breadcrumbWrap,#footerEntryBtn").css("opacity", "1");
+    jQuery('#loadLayer').delay(3000).queue(function(next) {
+    jQuery(this).addClass("loadComplete");
+    });
+    jQuery('#loadLayer').delay(600).queue(function(next) {
+    jQuery(this).css('display','none');
+    next();
+    });
 });

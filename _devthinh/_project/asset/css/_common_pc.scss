@@ -35,6 +35,16 @@ a {
     opacity: 0.7;
   }
 }
+/* flex　box
+------------------------------- */
+.flex_block{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items: center;
+}
 
 /*======= COMMON =========*/
 
