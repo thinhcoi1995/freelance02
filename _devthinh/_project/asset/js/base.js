@@ -8,7 +8,21 @@ window.requestAnimFrame = (function(callback) {
       return window.setTimeout(callback, 1000 / 60);
     };
 })();
-
+/*
+---------------------------------------
+Loading
+---------------------------------------
+*/
+window.addEventListener('DOMContentLoaded', function() {
+  jQuery(".contentWrap,body>header,body>footer,.breadcrumbWrap,#footerEntryBtn").css("opacity", "1");
+    jQuery('#loadLayer').delay(3000).queue(function(next) {
+    jQuery(this).addClass("loadComplete");
+    });
+    jQuery('#loadLayer').delay(600).queue(function(next) {
+    jQuery(this).css('display','none');
+    next();
+    });
+});
 window.cancelAnimFrame = (function(_id) {
   return window.cancelAnimationFrame ||
     window.cancelRequestAnimationFrame ||
